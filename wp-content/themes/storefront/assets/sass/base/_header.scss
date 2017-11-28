@@ -83,7 +83,10 @@
     z-index: 90;
     left: 0;
     right: 0;
-    cursor: pointer;
+    text-align: center;
+    img {
+        border-radius: 0;
+    }
 }
 #video-bg {
   top: 0; right: 0; bottom: 0; left: 0;
@@ -100,6 +103,64 @@
 }
 body {
     max-width: 100vw;
+}
+
+.header-logo {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.country-select {
+    .country-flag {
+        vertical-align: middle;
+        margin: 0 55px;
+        width: 65px;
+    }
+    &.sweden {
+        .english-link {
+            display: none;
+        }
+        .english-flag {
+            display: none;
+        }
+        .sweden-flag {
+            display: inline-block;
+        }
+        .swedish-link {
+            display: block;
+        }
+    }
+    &.english {
+        .english-link {
+            display: block;
+        }
+        .english-flag {
+            display: inline-block;
+        }
+        .sweden-flag {
+            display: none;
+        }
+        .swedish-link {
+            display: none;
+        }
+    }
+    .country-arrow {
+        font-family: 'ion';
+        font-size: 40px;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        color: white;
+        &:hover {
+            opacity: .5;
+        }
+    }
+    .country-button {
+        color: white;
+        cursor: pointer;
+        &:hover {
+            opacity: .5;
+        }
+    }
 }
 
 /* 1. No object-fit support: */
