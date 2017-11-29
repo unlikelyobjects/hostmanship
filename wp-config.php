@@ -21,7 +21,7 @@
 //Using environment variables for DB connection information
 
 $connectstr_dbhost = 'localhost';
-$connectstr_dbname = 'vardskapet';
+$connectstr_dbname = 'hostmanship';
 $connectstr_dbusername = 'root';
 $connectstr_dbpassword = 'root';
 $wp_debug = true;

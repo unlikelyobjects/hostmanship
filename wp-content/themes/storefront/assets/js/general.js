@@ -34,7 +34,7 @@ $(document).ready(function(){
       $('.country-select').removeClass('english').addClass('sweden');
     }
   });
-  $('.country-button').click(function(){
+  $('.country-button,.country-flag').click(function(){
     if($('.country-select').hasClass('sweden')){
       window.location.href = "http://www.vardskapet.se/sv/?lang=sv"
     }

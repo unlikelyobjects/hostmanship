@@ -14,7 +14,7 @@ function createMenu($style){
             <div class="hamburger show-mobile"></div>
             <div class="menu-links noselect">
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="http://www.vardskapet.se/the-art-of-welcoming/?lang=en" class="menu-link-art-of-welcoming">The art of welcoming</a>
+                    <a class="menu-link" href="http://vardskapet.azurewebsites.net/the-art-of-welcoming/?lang=en" class="menu-link-art-of-welcoming">Art of welcoming</a>
                 </div>
                 <div class="menu-link-holder">
                     <a class="menu-link" id="menu-link-hostmanship">Hostmanship</a>
@@ -23,10 +23,10 @@ function createMenu($style){
                     <a id="menu-link-partnership" class="menu-link">Partnership</a>
                 </div>
                 <div class="menu-link-holder">
-                    <a href="http://www.vardskapet.se/training/?lang=en" class="menu-link">Our services</a>
+                    <a href="http://vardskapet.azurewebsites.net/training/?lang=en" class="menu-link">Our services</a>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="http://www.vardskapet.se/about-vardskapet/#dynamic?lang=en">Contact us</a>
+                    <a class="menu-link" href="http://vardskapet.azurewebsites.net/about-vardskapet/#dynamic?lang=en">Contact us</a>
                 </div>
             </div>
         </div>

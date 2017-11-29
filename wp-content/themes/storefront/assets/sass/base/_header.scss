@@ -114,6 +114,10 @@ body {
         vertical-align: middle;
         margin: 0 55px;
         width: 65px;
+        cursor: pointer;
+        &:hover {
+            opacity: .8;
+        }
     }
     &.sweden {
         .english-link {
