@@ -14,19 +14,19 @@ function createMenu($style){
             <div class="hamburger show-mobile"></div>
             <div class="menu-links noselect">
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="http://vardskapet.azurewebsites.net/the-art-of-welcoming/?lang=en" class="menu-link-art-of-welcoming">Art of welcoming</a>
+                    <a class="menu-link" href="/artofwelcoming">Art of welcoming</a>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" id="menu-link-hostmanship">Hostmanship</a>
+                    <a class="menu-link" href="/hostmanship">Hostmanship</a>
                 </div>
                 <div class="menu-link-holder">
-                    <a id="menu-link-partnership" class="menu-link">Partnership</a>
+                    <a class="menu-link" href="/partnership">Partnership</a>
                 </div>
                 <div class="menu-link-holder">
-                    <a href="http://vardskapet.azurewebsites.net/training/?lang=en" class="menu-link">Our services</a>
+                    <a class="menu-link" href="/services">Our services</a>
                 </div>
                 <div class="menu-link-holder">
-                    <a class="menu-link" href="http://vardskapet.azurewebsites.net/about-vardskapet/#dynamic?lang=en">Contact us</a>
+                    <a class="menu-link" href="/contact">Contact us</a>
                 </div>
             </div>
         </div>
