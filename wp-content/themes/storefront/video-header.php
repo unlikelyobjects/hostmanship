@@ -5,7 +5,7 @@ function createVideoHeader($style){
         <div class="drop-shadow-bar"></div>
         <video class='video' src="/wp-content/themes/storefront/assets/videos/bg_gif_video.mp4" playsinline="" autoplay="" muted="" loop="" type="video/mp4"></video>
         <div class="hero">
-            <img class="header-logo" src="/wp-content/themes/storefront/assets/images/hostmanship-guy.png" width="190" alt="">
+            <img class="header-logo" src="/wp-content/themes/storefront/assets/images/hostmanship2.png" width="190" alt="">
             <h1 class="video-title">Where do you<br>want to go?</h1>
             <div class="country-select noselect sweden">
                 <div id="select-left" class="country-arrow">&#xf3d2;</div>

@@ -10,7 +10,7 @@ function createMenu($style){
     ?>
     <div class="menu cf <?php echo $style; ?>">
         <div class="menu-wrapper">
-            <img class="mobile-logo" src="/wp-content/themes/storefront/assets/images/hostmanship.png" alt="">
+            <img class="mobile-logo" src="/wp-content/themes/storefront/assets/images/hostmanship2.png" alt="">
             <div class="hamburger show-mobile"></div>
             <div class="menu-links noselect">
                 <div class="menu-link-holder">
