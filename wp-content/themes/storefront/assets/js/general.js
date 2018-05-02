@@ -2,6 +2,40 @@
 var $ = jQuery;
 var console;
 console.log('waddup');
+
+var countries = [
+  {
+    flag:'sweden.png',
+    link: 'http://www.vardskapet.se',
+    text: 'Välkommen in',
+    video: 'swe.mp4'
+  },
+  {
+    flag: 'denmark.png',
+    link: 'http://xn--vrtskabet-g3a.dk/',
+    text: 'Velkommen',
+    video: 'norge.mp4'
+  },
+  {
+    flag: 'uganda.png',
+    link: 'http://uganda.hostmanship.com',
+    text: 'Welcome',
+    video: 'uganda.mp4'
+  },
+  {
+    flag: 'norway.png',
+    link: 'http://www.vertskapet.no/',
+    text: 'Velkommen',
+    video: 'norge.mp4'
+  },
+  {
+    flag: 'turkey.png',
+    link: '/contact#turkey',
+    text: 'Karşılama',
+    video: 'turkey.mp4'
+  }
+];
+var currentCountry = 0;
 $(document).ready(function(){
   
   $('.menu-link-expanded').click(function(e){
@@ -30,21 +64,28 @@ $(document).ready(function(){
     },500);
   }
 
-  $('.country-arrow').click(function(){
-    if($('.country-select').hasClass('sweden')){
-      $('.country-select').removeClass('sweden').addClass('english');
+  $('#select-right').click(function(){
+    currentCountry++;
+    if(currentCountry >= countries.length){
+      currentCountry = 0;
     }
-    else {
-      $('.country-select').removeClass('english').addClass('sweden');
-    }
+    swapCountry();
   });
+  $('#select-left').click(function(){
+    currentCountry--;
+    if(currentCountry <= 0){
+      currentCountry = countries.length-1;
+    }
+    swapCountry();
+  });
+
+  function swapCountry(){
+    $('.country-select .country-flag').attr('src','/wp-content/themes/storefront/assets/images/' + countries[currentCountry].flag);
+    $('video.video').attr('src','/wp-content/themes/storefront/assets/videos/' + countries[currentCountry].video);
+    $('.country-button').text(countries[currentCountry].text)
+  }
   $('.country-button,.country-flag').click(function(){
-    if($('.country-select').hasClass('sweden')){
-      window.location.href = "http://www.vardskapet.se/sv/?lang=sv"
-    }
-    else {
-      window.location.href = "http://www.vardskapet.se/?lang=en"
-    }
+    window.location.href = countries[currentCountry].link;
   });
 
   $('#menu-link-hostmanship').click(function(){
@@ -93,6 +134,10 @@ $(document).ready(function(){
     $(this).parent().toggleClass('active');
 
   });
+
+  if(window.location.hash){
+    $(window.location.hash + '.entry-title').trigger('click');
+  }
 
   $('.client-modal-close').click(function(){
     $('.client-modal').removeClass('active');

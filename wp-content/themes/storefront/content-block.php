@@ -8,7 +8,7 @@ while ( have_rows('layout') ) : the_row();
                 <?php if(have_rows('content_blocks')):?>
                 <?php while ( have_rows('content_blocks') ) : the_row();?>
                 <?php if(get_row_layout() == 'expandable'): ?>
-                    <div class="expandable">
+                    <div class="expandable" id="<?php echo get_sub_field('identifier'); ?>">
                         <?php
                             $isOpen = get_sub_field('open_by_default') == true ? 'active' : '';
                         ?>

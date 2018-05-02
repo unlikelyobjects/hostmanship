@@ -114,37 +114,10 @@ body {
         vertical-align: middle;
         margin: 0 55px;
         width: 65px;
+        display: inline-block;
         cursor: pointer;
         &:hover {
             opacity: .8;
-        }
-    }
-    &.sweden {
-        .english-link {
-            display: none;
-        }
-        .english-flag {
-            display: none;
-        }
-        .sweden-flag {
-            display: inline-block;
-        }
-        .swedish-link {
-            display: block;
-        }
-    }
-    &.english {
-        .english-link {
-            display: block;
-        }
-        .english-flag {
-            display: inline-block;
-        }
-        .sweden-flag {
-            display: none;
-        }
-        .swedish-link {
-            display: none;
         }
     }
     .country-arrow {
@@ -161,6 +134,7 @@ body {
     .country-button {
         color: white;
         cursor: pointer;
+        display: block;
         &:hover {
             opacity: .5;
         }
@@ -175,7 +149,7 @@ body {
 }
 @media (max-aspect-ratio: 16/9) {
   #video-bg > video {
-      width: 330%; left: -115%;
+      width: 389%; left: -115%;
     }
 }
 
@@ -195,7 +169,11 @@ body {
     //display: none;
   }
   .video-header {
-      background-image: url(assets/images/mobile-bg.jpg);
+      background-color: black;
+      background-image: url(assets/images/loading-anim4.gif);
+      background-size: 100px 100px;
+      background-position: center center;
+      background-repeat: no-repeat;
   }
 }
 
