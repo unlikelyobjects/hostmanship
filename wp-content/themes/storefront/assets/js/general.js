@@ -136,7 +136,9 @@ $(document).ready(function(){
   });
 
   if(window.location.hash){
-    $(window.location.hash + '.entry-title').trigger('click');
+    if($(window.location.hash + ' .entry').hasClass('active') == false){
+      $(window.location.hash + ' .entry-title').trigger('click');
+    }
   }
 
   $('.client-modal-close').click(function(){
