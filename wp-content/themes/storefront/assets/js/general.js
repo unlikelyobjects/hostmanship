@@ -73,7 +73,7 @@ $(document).ready(function(){
   });
   $('#select-left').click(function(){
     currentCountry--;
-    if(currentCountry <= 0){
+    if(currentCountry < 0){
       currentCountry = countries.length-1;
     }
     swapCountry();

@@ -149,9 +149,17 @@ body {
 }
 @media (max-aspect-ratio: 16/9) {
   #video-bg > video {
-      width: 389%; left: -115%;
+      width: 330%; left: -115%;
     }
 }
+
+/* iphone x size
+@media (max-width:440px){
+    #video-bg > video {
+        width:385%;   
+    }
+}
+*/
 
 #video-bg > .canvas {
     width: 100%;
