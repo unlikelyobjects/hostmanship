@@ -8,31 +8,41 @@ var countries = [
     flag:'sweden.png',
     link: 'http://www.vardskapet.se',
     text: 'Välkommen in',
-    video: 'swe.mp4'
+    video: 'swe.mp4',
+    timestart: 0,
+    timeend: 2.4
   },
   {
     flag: 'denmark.png',
     link: 'http://xn--vrtskabet-g3a.dk/',
     text: 'Velkommen',
-    video: 'norge.mp4'
+    video: 'norge.mp4',
+    timestart: 2.400,
+    timeend: 4.400
   },
   {
     flag: 'uganda.png',
     link: 'http://uganda.hostmanship.com',
     text: 'Welcome',
-    video: 'uganda.mp4'
+    video: 'uganda.mp4',
+    timestart: 4.400,
+    timeend: 6.400
   },
   {
     flag: 'norway.png',
     link: 'http://www.vertskapet.no/',
     text: 'Velkommen',
-    video: 'norge.mp4'
+    video: 'norge.mp4',
+    timestart: 6.400,
+    timeend: 8.400
   },
   {
     flag: 'turkey.png',
     link: '/contact#turkey',
     text: 'Karşılama',
-    video: 'turkey.mp4'
+    video: 'turkey.mp4',
+    timestart: 8.400,
+    timeend: 10.400
   }
 ];
 var currentCountry = 0;
@@ -79,11 +89,28 @@ $(document).ready(function(){
     swapCountry();
   });
 
+  $('video').on('playing',function(e){
+    console.log('playing',e);
+    setInterval(checkTime,50);
+  });
+
+  
+  var $vid = $('video');
   function swapCountry(){
     $('.country-select .country-flag').attr('src','/wp-content/themes/storefront/assets/images/' + countries[currentCountry].flag);
-    $('video.video').attr('src','/wp-content/themes/storefront/assets/videos/' + countries[currentCountry].video);
+    $vid[0].currentTime = countries[currentCountry].timestart;
     $('.country-button').text(countries[currentCountry].text)
   }
+
+  function checkTime(){
+    console.log('checkTime()');
+    var t  = $vid[0].currentTime;
+    if(t >= countries[currentCountry].timeend){
+      $vid[0].currentTime = countries[currentCountry].timestart;
+    }
+  }
+  
+  
   $('.country-button,.country-flag').click(function(){
     window.location.href = countries[currentCountry].link;
   });
