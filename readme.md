@@ -1,5 +1,10 @@
 #hostmanship WP
 
+Taken over from https://github.com/karlperemil/hostmanship 
+
+
+##Original readme
+
 Installation:
 
 Create local mysql database using values in wp-config.php
